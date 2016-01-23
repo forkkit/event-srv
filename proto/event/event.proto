@@ -1,0 +1,71 @@
+syntax = "proto3";
+
+import "github.com/micro/go-platform/event/proto/event.proto";
+
+service Event {
+	rpc Read(ReadRequest) returns (ReadResponse) {}
+	rpc Create(CreateRequest) returns (CreateResponse) {}
+	rpc Search(SearchRequest) returns (SearchResponse) {}
+	rpc Stream(StreamRequest) returns (stream StreamResponse) {}
+
+	// should not really be used since event sourcing is append only
+	rpc Update(UpdateRequest) returns (UpdateResponse) {}
+	rpc Delete(DeleteRequest) returns (DeleteResponse) {}
+}
+
+message ReadRequest {
+	string id = 1;
+}
+
+message ReadResponse {
+	Record record = 1;
+}
+
+message CreateRequest {
+	Record record = 1;
+}
+
+message CreateResponse {
+}
+
+message UpdateRequest {
+	Record record = 1;
+}
+
+message UpdateResponse {
+}
+
+message DeleteRequest {
+	string id = 1;
+}
+
+message DeleteResponse {
+}
+
+message SearchRequest {
+	// optional root_id
+	string id = 1;
+	// optional
+	string type = 2;
+	// timeseries bounds
+	int64 from = 3;
+	int64 to = 4;
+	// range bounds
+	int64 limit = 5;
+	int64 offset = 6;
+	// order
+	bool reverse = 7;
+}
+
+message SearchResponse {
+	repeated Record records = 1;
+}
+
+message StreamRequest {
+	// types to watch
+	repeated string types = 1;
+}
+
+message StreamResponse {
+	Record record = 1;
+}
