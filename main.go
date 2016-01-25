@@ -40,7 +40,7 @@ func main() {
 
 	service.Server().Subscribe(
 		service.Server().NewSubscriber(
-			"platform.event.record",
+			"micro.event.record",
 			event.Process,
 			server.SubscriberQueue("event-srv"),
 		),
@@ -49,7 +49,7 @@ func main() {
 	// For watchers
 	service.Server().Subscribe(
 		service.Server().NewSubscriber(
-			"platform.event.record",
+			"micro.event.record",
 			event.Stream,
 		),
 	)
