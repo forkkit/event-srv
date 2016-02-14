@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"github.com/micro/event-srv/db"
-	"github.com/micro/go-platform/event/proto"
+	event "github.com/micro/go-platform/event/proto"
 
 	_ "github.com/go-sql-driver/mysql"
 )
