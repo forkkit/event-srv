@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+package go.micro.srv.event.event;
+
 import "github.com/micro/go-platform/event/proto/event.proto";
 
 service Event {

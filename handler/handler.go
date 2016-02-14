@@ -5,7 +5,7 @@ import (
 
 	"github.com/micro/event-srv/db"
 	ev "github.com/micro/event-srv/event"
-	"github.com/micro/event-srv/proto/event"
+	event "github.com/micro/event-srv/proto/event"
 	"github.com/micro/go-micro/errors"
 	"golang.org/x/net/context"
 
