@@ -1,7 +1,8 @@
 package main
 
 import (
-	log "github.com/golang/glog"
+	"log"
+
 	"github.com/micro/cli"
 	"github.com/micro/event-srv/db"
 	"github.com/micro/event-srv/db/mysql"
