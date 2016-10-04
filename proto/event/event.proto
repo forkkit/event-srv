@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package go.micro.srv.event.event;
 
-import "github.com/micro/go-platform/event/proto/event.proto";
+import "github.com/micro/go-os/event/proto/event.proto";
 
 service Event {
 	rpc Read(ReadRequest) returns (ReadResponse) {}
@@ -20,18 +20,18 @@ message ReadRequest {
 }
 
 message ReadResponse {
-	Record record = 1;
+	go.micro.os.event.Record record = 1;
 }
 
 message CreateRequest {
-	Record record = 1;
+	go.micro.os.event.Record record = 1;
 }
 
 message CreateResponse {
 }
 
 message UpdateRequest {
-	Record record = 1;
+	go.micro.os.event.Record record = 1;
 }
 
 message UpdateResponse {
@@ -60,7 +60,7 @@ message SearchRequest {
 }
 
 message SearchResponse {
-	repeated Record records = 1;
+	repeated go.micro.os.event.Record records = 1;
 }
 
 message StreamRequest {
@@ -69,5 +69,5 @@ message StreamRequest {
 }
 
 message StreamResponse {
-	Record record = 1;
+	go.micro.os.event.Record record = 1;
 }
