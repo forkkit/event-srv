@@ -4,9 +4,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/micro/event-srv/db"
 	"github.com/micro/go-micro/errors"
-	event "github.com/micro/go-os/event/proto"
+	"github.com/microhq/event-srv/db"
+	event "github.com/microhq/event-srv/proto/event"
 	"golang.org/x/net/context"
 
 	"github.com/pborman/uuid"

@@ -8,8 +8,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/micro/event-srv/db"
-	event "github.com/micro/go-os/event/proto"
+	"github.com/microhq/event-srv/db"
+	event "github.com/microhq/event-srv/proto/event"
 
 	_ "github.com/go-sql-driver/mysql"
 )

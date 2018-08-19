@@ -19,7 +19,7 @@ Event server is used to store a time series set of events for the platform. Serv
 4. Download and start the service
 
 	```shell
-	go get github.com/micro/event-srv
+	go get github.com/microhq/event-srv
 	event-srv --database_url="root:root@tcp(192.168.99.100:3306)/event"
 	```
 

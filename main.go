@@ -4,13 +4,13 @@ import (
 	"log"
 
 	"github.com/micro/cli"
-	"github.com/micro/event-srv/db"
-	"github.com/micro/event-srv/db/mysql"
-	"github.com/micro/event-srv/event"
-	"github.com/micro/event-srv/handler"
-	proto "github.com/micro/event-srv/proto/event"
 	"github.com/micro/go-micro"
 	"github.com/micro/go-micro/server"
+	"github.com/microhq/event-srv/db"
+	"github.com/microhq/event-srv/db/mysql"
+	"github.com/microhq/event-srv/event"
+	"github.com/microhq/event-srv/handler"
+	proto "github.com/microhq/event-srv/proto/event"
 )
 
 var (

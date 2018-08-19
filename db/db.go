@@ -1,7 +1,7 @@
 package db
 
 import (
-	event "github.com/micro/go-os/event/proto"
+	event "github.com/microhq/event-srv/proto/event"
 )
 
 type DB interface {

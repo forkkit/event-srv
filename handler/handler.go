@@ -3,10 +3,10 @@ package handler
 import (
 	"time"
 
-	"github.com/micro/event-srv/db"
-	ev "github.com/micro/event-srv/event"
-	event "github.com/micro/event-srv/proto/event"
 	"github.com/micro/go-micro/errors"
+	"github.com/microhq/event-srv/db"
+	ev "github.com/microhq/event-srv/event"
+	event "github.com/microhq/event-srv/proto/event"
 	"golang.org/x/net/context"
 
 	"github.com/pborman/uuid"
